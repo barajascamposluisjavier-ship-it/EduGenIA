@@ -38,3 +38,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+## Reglas de ramas y Pull Requests
+
+**Ramas**
+- `main`: versión estable. **Nadie hace push directo.**
+- Cada integrante trabaja solo en su rama:
+  - José: `feat/jose-ui`
+  - Luis: `feat/luis-backend`
+  - Eder: `feat/eder-auth-data`
+
+**Flujo de trabajo**
+1. Antes de empezar: `git pull origin main`.
+2. Programar solo en los archivos de tu módulo.
+3. Guardar y subir: `git add .` → `git commit -m "feat: descripción"` → `git push`.
+4. Abrir un Pull Request hacia `main`.
+5. Otro compañero lo revisa y aprueba (mínimo 1 aprobación).
+6. Se hace el merge y todos corren `git pull origin main`.
+
+**Reglas**
+- PRs pequeños y frecuentes, no uno gigante al final.
+- No modificar archivos de otro módulo sin avisar.
+- Avisar antes de instalar dependencias o cambiar `package.json`.
+- Nunca subir `.env.local` ni claves (usar `.env.example`).
+- Resolver los comentarios de la revisión antes del merge.
+- Mensajes de commit con prefijo: `feat:` (nuevo), `fix:` (corrección), `docs:` (documentación), `chore:` (configuración).
